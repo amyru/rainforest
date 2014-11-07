@@ -1,0 +1,8 @@
+<h1>Product Information</h1>
+
+
+<p><%= @product.name %> <%= @product.description %> <%= @product.price_in_cents %></p>
+
+<%= render 'form' %>
+
+<%= link_to 'Back', products_path %>
