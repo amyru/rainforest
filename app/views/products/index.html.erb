@@ -1,9 +1,8 @@
 <h1>ALL Products</h1>
 
-product.formatted_price
 
 <%= @products.each do |product| %>
-<p><%= product.name %>, <%= product.description %>, <%= product.price_in_cents %></p>
+<p><%= product.name %>, <%= product.description %>, <%= product.formatted_price %></p>
 <% end %>
 
 

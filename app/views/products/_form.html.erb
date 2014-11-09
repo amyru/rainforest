@@ -2,10 +2,10 @@
 
 	<% if @product.errors.any? %>
 		<div id="error_explenation">
-			<h2><%= pluralize(@produc.errors.count, "error") %> prohibited this product from being saved: </h2>
+			<h2><%= pluralize(@product.errors.count, "error") %> prohibited this product from being saved: </h2>
 			<ul>
 				<% @product.errors.full_message.each do |msg| %>
-				<li><%= msg %></li>
+					<li><%= msg %></li>
 				<% end %>
 			</ul>
 		</div>
