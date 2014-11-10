@@ -1,5 +1,6 @@
 class ProductsController < ApplicationController
   def index
+    @most_recent_product_order = Product.newest_first
   	@products = Product.all
   end
 

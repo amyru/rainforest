@@ -6,8 +6,10 @@ class ApplicationController < ActionController::Base
 
   private
   def current_user
-  	@current_user ||= User.find(session[:user_id]) if session[:user_id]
-  end
+  	@current_user ||= User.find(session[:user_id]) if session[:user_id] # if there is a coockie set up for this do that otherwise log in
+  end #if no one is logged in return nil
+
+  helper_method :current_user #tells rails to also use this as a helper method to be available in views
 
   def ensure_logged_in
   	unless current_user
