@@ -1,9 +1,5 @@
 <h1>ALL Products</h1>
 
-
-<%= @most_recent_product_order.each do |product| %>
+<% @products.each do |product| %>
 <p><%= product.name %>, <%= product.description %>, <%= product.formatted_price %></p>
 <% end %>
-
-
-
