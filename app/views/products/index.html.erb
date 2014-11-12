@@ -1,5 +1,16 @@
 <h1>ALL Products</h1>
 
 <% @products.each do |product| %>
-<p><%= product.name %>, <%= product.description %>, <%= product.formatted_price %></p>
-<% end %>
+
+	<div class="media">
+	  <a class="media-left media-middle" href="#">
+	    <img src="http://www.apetogentleman.com/wp-content/uploads/2010/08/neals-yard-remedies-soothing-starflower.jpg" width="64px" height="64px">
+	  </a>
+	  <div class="media-body">
+	    <h4 class="media-heading"><%= product.name %></h4>
+	    <p><%= product.description %></p>
+	    <p><%= product.formatted_price %></p>
+	  </div>
+	</div>
+
+<%end%>
